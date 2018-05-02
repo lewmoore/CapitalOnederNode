@@ -38,4 +38,19 @@ describe('Success Page', function(){
       chai.expect(res.text).to.include('Moore')
     })
   })
+
+  it('should render entire welcome text with input from form', function(){
+    chai.request(app)
+    .post('/success')
+    .send({
+      "title": 'Mr',
+      'firstname': 'Lewis',
+      'surname': 'Moore',
+      'previouscountry': 'UK',
+      'sex': 'Male'
+    })
+    .end(function(err, res){
+      chai.expect(res.text).to.include('Mr Lewis Moore, thank you for registering. Your Capital Oneder unique ID tag is:')
+    })
+  })
 })
