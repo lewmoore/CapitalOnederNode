@@ -11,18 +11,6 @@ describe('Landing Page', function(){
       expect(res).to.have.status(200);
     })
   })
-  //
-  // it('should render a welcome message', function(){
-  //   request('http://localhost:8080', function(err, res, body) {
-  //     expect(res.text).to.include('Welcome to CapitalOneder, your citizenship is a click away!')
-  //   })
-  // })
-
-  // it('renders a form asking for users name', function(){
-  //   request('http://localhost:8080', function(err, res, body){
-  //     expect(res.body).to.include('First Name:')
-  //   })
-  // })
 
   it('Renders form text', function() {
     chai.request(app)
