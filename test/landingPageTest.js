@@ -36,4 +36,12 @@ describe('Landing Page', function(){
       expect(res.text).to.include('Previous Country:')
     })
   })
+
+  it('renders form text for surname', function(){
+    chai.request(app)
+    .get('/')
+    .end(function(err, res) {
+      expect(res.text).to.include('Surname:')
+    })
+  })
 })
