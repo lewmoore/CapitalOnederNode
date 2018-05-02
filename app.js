@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
+const generator = require('./src/citizenIDGenerator')
 app.set("view engine", "ejs");
 app.set("views", "views")
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +20,7 @@ app.post('/success', function(req, res){
   this.title = req.body.title
   this.firstname = req.body.firstname
   this.surname = req.body.surname
+  this.newCitizenID = generator()
   res.render('successPage')
 })
 
