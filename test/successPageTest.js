@@ -13,4 +13,12 @@ describe('Success Page', function(){
       expect(res).to.have.status(200)
     })
   })
+
+  it('can recieve post requests', function(){
+    chai.request(app)
+    .post('/success')
+    .end(function(err, res){
+      expect(res).to.have.status(200)
+    })
+  })
 })
