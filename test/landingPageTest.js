@@ -52,4 +52,12 @@ describe('Landing Page', function(){
       expect(res.text).to.include("Sex:")
     })
   })
+
+  it('renders text for Title field', function(){
+    chai.request(app)
+    .get('/')
+    .end(function(err, res){
+      expect(res.text).to.include("Title:")
+    })
+  })
 })
