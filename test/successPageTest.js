@@ -57,12 +57,4 @@ describe('Success Page', function(){
       chai.expect(res.text).to.contain('Mr Lewis Moore, thank you for registering. Your Capital Oneder unique ID tag is:')
     })
   })
-
-  // it('random number generator function is called on post request', function(){
-  //   var object = { generator () {} }
-  //   const idStub = Sinon.stub(object, "generator")
-  //   chai.request(app)
-  //   .post('/success')
-  //   expect()
-  // })
 })
