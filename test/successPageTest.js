@@ -21,4 +21,21 @@ describe('Success Page', function(){
       expect(res).to.have.status(200)
     })
   })
+
+  it('should render the users form input', function(){
+    chai.request(app)
+    .post('/success')
+    .send({
+      "title": 'Mr',
+      'firstname': 'Lewis',
+      'surname': 'Moore',
+      'previouscountry': 'UK',
+      'sex': 'Male'
+    })
+    .end(function(err, res){
+      chai.expect(res.text).to.include('Mr')
+      chai.expect(res.text).to.include('Lewis')
+      chai.expect(res.text).to.include('Moore')
+    })
+  })
 })

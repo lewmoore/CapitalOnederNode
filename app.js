@@ -16,6 +16,9 @@ app.get('/success', function(req, res){
 })
 
 app.post('/success', function(req, res){
+  this.title = req.body.title
+  this.firstname = req.body.firstname
+  this.surname = req.body.surname
   res.render('successPage')
 })
 
