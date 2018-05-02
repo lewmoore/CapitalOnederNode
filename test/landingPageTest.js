@@ -16,7 +16,6 @@ describe('Landing Page', function(){
     chai.request(app)
     .get('/')
     .end(function(err, res) {
-      console.log(res.text)
       expect(res.text).to.include("First Name:");
     });
   });
