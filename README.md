@@ -13,3 +13,6 @@ When a person becomes a citizen, they are provided with a Capital Onederer uniqu
 The president of Capital Onederer, Rich Faircountry, expects 100MM people apply for citizenship on the first day. We need an API to register the customers as they come in, without missing anyone out, hopefully. Every citizen should also receive the initial details needed to make them a citizen.
 
 At a later point, it might be needed for the head of a family to be able to add in all the members of their family in one go.
+
+##Process
+* Initialise repository as a node project and render a blank landing page
