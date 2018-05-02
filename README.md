@@ -24,3 +24,4 @@ At a later point, it might be needed for the head of a family to be able to add 
 * Add post route for successPage
 * Add success message to successPage containing the users name and title
 * Add randomly generated Citizen ID to success page
+* Deploy Application to AWS ElasticBeanstalk
