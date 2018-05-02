@@ -22,3 +22,4 @@ At a later point, it might be needed for the head of a family to be able to add 
 * Add form skeleton with relevant text fields
 * Add get route for successPage
 * Add post route for successPage
+* Add success message to successPage containing the users name and title
