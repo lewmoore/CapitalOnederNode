@@ -25,8 +25,15 @@ describe('Landing Page', function(){
     chai.request(app)
     .get('/')
     .end(function(err, res) {
-      console.log(res.text)
       expect(res.text).to.include("Welcome to CapitaOneder, your citizenship is a click away!");
     });
   });
+
+  it('renders form text for Previous Country field', function(){
+    chai.request(app)
+    .get('/')
+    .end(function(err, res) {
+      expect(res.text).to.include('Previous Country:')
+    })
+  })
 })
