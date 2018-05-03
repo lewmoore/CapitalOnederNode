@@ -40,7 +40,7 @@ Please note you must have MongoDB installed to run this. To do this:
 * Add randomly generated Citizen ID to success page
 * Deploy Application to AWS ElasticBeanstalk
 * Add CircleCI build to application
-* Adds for input to local Mongo database
+* User input is saved to local Mongo database
 
 ## Reflection
 
