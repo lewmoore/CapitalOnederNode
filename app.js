@@ -41,6 +41,6 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
     this.collection = db.collection('citizenCollection')
 });
 
-app.listen(8080, () => console.log('Your on localhost 8080'))
+app.listen(8081, () => console.log('Your on localhost 8081'))
 
 module.exports = app
