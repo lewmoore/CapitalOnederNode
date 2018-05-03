@@ -1,6 +1,7 @@
 # CapitalOnederNode
 
 Application deployed in [AWS here](CapitalOneder-dev.eu-west-1.elasticbeanstalk.com)
+[Architecture Diagram & Planning diagram](https://github.com/lewmoore/CapitalOnederNode/public/images/)
 
 ## Introduction
 In the establishment of the New World Order, CapitalOne has laid down plans for creating a nation, Capital Oneder, for anyone to be a part of. To become a citizen, people need to send in the following info:
@@ -40,14 +41,16 @@ Please note you must have MongoDB installed to run this. To do this:
 * Add CircleCI build to application
 * Adds for input to local Mongo database
 
-## What went well
+## Reflection
+
+### What went well
 During this tech test, I feel like I learnt alot. Initially, I made the decision to begin with trying to build an API in Java, having never done Java before, the learning curve was pretty steep. Tuesday afternoon was spent wrangling with Java, intelliJ, Maven, Gradle and many other Java related tech. My main problem, I think, was problems with Gradle config and my versions of Java. This was frustrating at times, but I learnt a bit about how a Java project works (and is initialised).
 
 After this, I decided to pivot and do the tech test in Node as I am much more familiar with this. However, this meant I only had about 1 day to do the task so I had to move quick. I decided my MVP would be a basic Node App that accepted user input (title, first name, last name, previous country and sex) and return a unique ID number to the user. I managed to reach this stage, as well as including a MongoDB database that is updated with the users information.
 
 I briefly explored AWS by deploying the app to ElasticBeanstalk and included a CircleCI build pipeline. This, however, was effected quite a lot by the local Mongo database.
 
-## If I had more time
+### If I had more time
 If i had more time on this tech test I would do some more work around the Mongo database. I would add the users new ID number to the citizenCollection. I would also add some guard conditions around the new citizens being unique, and I would also make the new ID number unique to each citizen.
 
 I would also refine the AWS environment and the CircleCI build. Once I had these in place, they were working fine. However, the addition of a local Mongo database made the builds and deployments keep failing. Given more time, I would look in to both of those issues.
