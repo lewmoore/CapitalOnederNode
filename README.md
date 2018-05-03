@@ -55,3 +55,5 @@ I briefly explored AWS by deploying the app to ElasticBeanstalk and included a C
 If i had more time on this tech test I would do some more work around the Mongo database. I would add the users new ID number to the citizenCollection. I would also add some guard conditions around the new citizens being unique, and I would also make the new ID number unique to each citizen.
 
 I would also refine the AWS environment and the CircleCI build. Once I had these in place, they were working fine. However, the addition of a local Mongo database made the builds and deployments keep failing. Given more time, I would look in to both of those issues.
+
+I would also add a small amount of styling to the app to make it look a bit more presentable!
