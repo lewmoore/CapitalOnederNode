@@ -1,7 +1,8 @@
 # CapitalOnederNode
 
-Application deployed in [AWS here](CapitalOneder-dev.eu-west-1.elasticbeanstalk.com)
-[Architecture Diagram & Planning diagram](https://github.com/lewmoore/CapitalOnederNode/public/images/)
+* Application deployed in [AWS here](CapitalOneder-dev.eu-west-1.elasticbeanstalk.com)
+
+* [Architecture Diagram & Planning diagram](https://github.com/lewmoore/CapitalOnederNode/public/images/)
 
 ## Introduction
 In the establishment of the New World Order, CapitalOne has laid down plans for creating a nation, Capital Oneder, for anyone to be a part of. To become a citizen, people need to send in the following info:
