@@ -22,7 +22,12 @@ app.post('/success', function(req, res){
   this.title = req.body.title
   this.firstname = req.body.firstname
   this.surname = req.body.surname
+  this.previouscountry = req.body.previouscountry
+  this.sex = req.body.sex
   this.newCitizenID = generator()
+  MongoClient.connect('mongodb://localhost:27017', function (err, client) {
+    this.collection.insertOne({title: this.title, firstname: this.firstname, surname: this.surname, previouscountry: this.previouscountry, sex: this.sex})
+  })
   res.render('successPage')
 })
 
@@ -34,7 +39,6 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
     }
     var db = client.db('CapitalOnederTest')
     this.collection = db.collection('citizenCollection')
-  client.close();
 });
 
 app.listen(8080, () => console.log('Your on localhost 8080'))
