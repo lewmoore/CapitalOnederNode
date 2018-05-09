@@ -59,3 +59,6 @@ If i had more time on this tech test I would do some more work around the Mongo 
 I would also refine the AWS environment and the CircleCI build. Once I had these in place, they were working fine. However, the addition of a local Mongo database made the builds and deployments keep failing. Given more time, I would look in to both of those issues.
 
 I would also add a small amount of styling to the app to make it look a bit more presentable!
+
+### Post Tech Test
+Since submitting this tech test, I have been adding to the application. I have added Mongoose for easier Mongo connection and the app successfully deploys to AWS when the local mongo instance is running.
