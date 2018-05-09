@@ -2,10 +2,11 @@
   "name": "capitalonedernode",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --exit",
-    "start": "node app.js"
+    "start": "node index.js",
+    "poststart": "mongod --dbpath /data/db --fork --logpath data"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "chai-spies": "^1.0.0",
     "ejs": "^2.5.9",
     "mongodb": "^3.0.7",
+    "mongoose": "^5.0.17",
     "request": "^2.85.0",
     "sinon": "^5.0.3"
   }

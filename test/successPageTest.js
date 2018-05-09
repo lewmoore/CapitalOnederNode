@@ -1,6 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const app = require('../app');
+const app = require('../index');
 const getRandomNumber = require('../src/citizenIDGenerator.js')
 const expect = chai.expect;
 const request = require('request')

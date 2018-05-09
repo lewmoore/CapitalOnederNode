@@ -2,12 +2,24 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 const generator = require('./src/citizenIDGenerator')
-var MongoClient = require('mongodb').MongoClient
+const mongoose = require('mongoose')
 var format = require('util').format;
 app.set("view engine", "ejs");
 app.set("views", "views")
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+mongoose.Promise = global.Promise
+mongoose.connect('mongodb://localhost:27017/citizens')
+
+var citizenSchema = new mongoose.Schema({
+  title: String,
+  firstname: String,
+  surname: String,
+  previouscountry: String,
+  sex: String
+})
+var Citizen = mongoose.model('Citizen', citizenSchema)
 
 
 app.get('/', function(req, res){
@@ -25,21 +37,17 @@ app.post('/success', function(req, res){
   this.previouscountry = req.body.previouscountry
   this.sex = req.body.sex
   this.newCitizenID = generator()
-  MongoClient.connect('mongodb://localhost:27017', function (err, client) {
-    this.collection.insertOne({title: this.title, firstname: this.firstname, surname: this.surname, previouscountry: this.previouscountry, sex: this.sex})
+  
+  var citizen = new Citizen(req.body);
+  citizen.save()
+  .then(item => {
+    res.render('successPage')
   })
-  res.render('successPage')
-})
+  .catch(err => {
+    res.status(400).send("Not Saved")
+  });
 
-MongoClient.connect('mongodb://localhost:27017', function (err, client) {
-    if (err) {
-      throw err;
-    } else {
-        console.log("successfully connected to the database");
-    }
-    var db = client.db('CapitalOnederTest')
-    this.collection = db.collection('citizenCollection')
-});
+})
 
 app.listen(8081, () => console.log('Your on localhost 8081'))
 
