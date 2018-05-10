@@ -26,8 +26,6 @@ app.post('/success', function(req, res){
   this.title = req.body.title
   this.firstname = req.body.firstname
   this.surname = req.body.surname
-  this.previouscountry = req.body.previouscountry
-  this.sex = req.body.sex
   this.newCitizenID = generator()
 
   var citizen = new Citizen(req.body);
