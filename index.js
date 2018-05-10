@@ -18,11 +18,11 @@ app.get('/', function(req, res){
   res.render('landingPage')
 });
 
-app.get('/success', function(req, res){
+app.get('/citizen', function(req, res){
   res.render('successPage')
 })
 
-app.post('/success', function(req, res){
+app.post('/citizen', function(req, res){
   this.title = req.body.title
   this.firstname = req.body.firstname
   this.surname = req.body.surname

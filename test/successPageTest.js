@@ -12,7 +12,7 @@ chai.use(chaiHttp);
 describe('Success Page', function(){
   it('should load with status 200', function(){
     chai.request(app)
-    .get('/success')
+    .get('/citizen')
     .end(function(err, res){
       expect(res).to.have.status(200)
     })
@@ -20,7 +20,7 @@ describe('Success Page', function(){
 
   it('can recieve post requests', function(){
     chai.request(app)
-    .post('/success')
+    .post('/citizen')
     .end(function(err, res){
       expect(res).to.have.status(200)
     })
@@ -28,7 +28,7 @@ describe('Success Page', function(){
 
   it('should render the users form input', function(){
     chai.request(app)
-    .post('/success')
+    .post('/citizen')
     .send({
       "title": 'Mr',
       'firstname': 'Lewis',
@@ -45,7 +45,7 @@ describe('Success Page', function(){
 
   it('should render entire welcome text with input from form', function(){
     chai.request(app)
-    .post('/success')
+    .post('/citizen')
     .send({
       "title": 'Mr',
       'firstname': 'Lewis',
