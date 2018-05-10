@@ -12,15 +12,7 @@ app.use(bodyParser.json());
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost:27017/citizens')
 
-var citizenSchema = new mongoose.Schema({
-  title: String,
-  firstname: String,
-  surname: String,
-  previouscountry: String,
-  sex: String
-})
-var Citizen = mongoose.model('Citizen', citizenSchema)
-
+let Citizen = require('./src/model/citizen')
 
 app.get('/', function(req, res){
   res.render('landingPage')
@@ -37,7 +29,7 @@ app.post('/success', function(req, res){
   this.previouscountry = req.body.previouscountry
   this.sex = req.body.sex
   this.newCitizenID = generator()
-  
+
   var citizen = new Citizen(req.body);
   citizen.save()
   .then(item => {
