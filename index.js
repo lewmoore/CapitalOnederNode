@@ -23,17 +23,12 @@ app.get('/citizen', function(req, res){
 })
 
 app.post('/citizen', function(req, res){
-  this.title = req.body.title
-  this.firstname = req.body.firstname
-  this.surname = req.body.surname
   this.newCitizenID = generator()
-
   var citizen = new Citizen(req.body);
-  citizen.save()
-  .then(item => {
-    res.render('successPage')
-  })
-  .catch(err => {
+
+  citizen.save().then(item => {
+    res.render('successPage', item)
+  }).catch(err => {
     res.status(400).send("Not Saved")
   });
 
