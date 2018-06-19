@@ -2,7 +2,7 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../index');
 const expect = chai.expect;
-const request = require('request')
+// const request = require('request')
 const Sinon = require('sinon')
 const spies = require('chai-spies');
 chai.use(spies);
