@@ -10,14 +10,6 @@ chai.use(spies);
 chai.use(chaiHttp);
 
 describe('Success Page', function(){
-  it('should load with status 200', function(){
-    chai.request(app)
-    .get('/citizen')
-    .end(function(err, res){
-      expect(res).to.have.status(200)
-    })
-  })
-
   it('can recieve post requests', function(){
     chai.request(app)
     .post('/citizen')

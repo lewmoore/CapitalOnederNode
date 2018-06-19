@@ -3,12 +3,15 @@ const chaiHttp = require('chai-http');
 const app = require('../index');
 const expect = chai.expect;
 const request = require('request')
+const should = chai.should()
 chai.use(chaiHttp);
 
 describe('Landing Page', function(){
   it('should load successfully', function(){
-    request('http://localhost:8081', function(err, res){
-      expect(res).to.have.status(200);
+    chai.request(app)
+    .get('/')
+    .end(function(err, res){
+      res.should.have.status(200)
     })
   })
 

@@ -18,10 +18,6 @@ app.get('/', function(req, res){
   res.render('landingPage')
 });
 
-app.get('/citizen', function(req, res){
-  res.render('successPage')
-})
-
 app.post('/citizen', function(req, res){
   this.newCitizenID = generator()
   var citizen = new Citizen(req.body);
