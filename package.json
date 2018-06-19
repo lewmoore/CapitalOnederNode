@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit",
+    "test": "mocha",
     "start": "node index.js",
     "poststart": "mongod --dbpath /data/db --fork --logpath data"
   },

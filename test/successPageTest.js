@@ -17,15 +17,16 @@ describe('Success Page', function(){
   }
 
 
-  it('can recieve post requests', function(){
+  it('can recieve post requests', function(done){
     chai.request(app)
     .post('/citizen')
     .end(function(err, res){
       expect(res).to.have.status(200)
+      done()
     })
   })
 
-  it('should render the users form input', function(){
+  it('should render the users form input', function(done){
     chai.request(app)
     .post('/citizen')
     .send(user)
@@ -33,15 +34,17 @@ describe('Success Page', function(){
       chai.expect(res.text).to.include('Mr')
       chai.expect(res.text).to.include('Lewis')
       chai.expect(res.text).to.include('Moore')
+      done()
     })
   })
 
-  it('should render entire welcome text with input from form', function(){
+  it('should render entire welcome text with input from form', function(done){
     chai.request(app)
     .post('/citizen')
     .send(user)
     .end(function(err, res){
       chai.expect(res.text).to.contain('Mr Lewis Moore, thank you for registering. Your Capital Oneder unique ID tag is:')
+      done()
     })
   })
 })
