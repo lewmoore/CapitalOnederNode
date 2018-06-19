@@ -30,8 +30,8 @@ describe('Landing Page', function(){
     .get('/')
     .end(function(err, res) {
       expect(res.text).to.include("Welcome to CapitaOneder, your citizenship is a click away!");
-      done()
     });
+    done()
   });
 
   it('renders form text for Previous Country field', function(done){
@@ -39,8 +39,8 @@ describe('Landing Page', function(){
     .get('/')
     .end(function(err, res) {
       expect(res.text).to.include('Previous Country:')
-      done()
     })
+    done()
   })
 
   it('renders form text for surname', function(done){
@@ -48,8 +48,8 @@ describe('Landing Page', function(){
     .get('/')
     .end(function(err, res) {
       expect(res.text).to.include('Surname:')
-      done()
     })
+    done()
   })
 
   it('renders for text for Sex field', function(done){
@@ -57,8 +57,8 @@ describe('Landing Page', function(){
     .get('/')
     .end(function(err, res){
       expect(res.text).to.include("Sex:")
-      done()
     })
+    done()
   })
 
   it('renders text for Title field', function(done){
@@ -66,7 +66,7 @@ describe('Landing Page', function(){
     .get('/')
     .end(function(err, res){
       expect(res.text).to.include("Title:")
-      done()
     })
+    done()
   })
 })
