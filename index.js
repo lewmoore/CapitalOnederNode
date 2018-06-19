@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/citizen', function(req, res){
-  this.newCitizenID = generator()
+  // this.newCitizenID = generator()
   var citizen = new Citizen(req.body);
 
   citizen.save().then(item => {
