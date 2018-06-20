@@ -2,8 +2,6 @@
 
 After a day of attempting to build the API in Java for the first time, I decided to complete this tech test in Node, tested with Mocha and Chai and with a MongoDB database
 
-* Application deployed in AWS: http://capitalOneder.eu-west-1.elasticbeanstalk.com
-
 * [Architecture Diagram & Planning diagram](https://github.com/lewmoore/CapitalOnederNode/public/images/)
 
 ## Introduction
