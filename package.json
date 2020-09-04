@@ -28,7 +28,7 @@
     "body-parser": "^1.18.2",
     "chai-spies": "^1.0.0",
     "ejs": "^2.5.9",
-    "mongodb": "^3.0.7",
+    "mongodb": "^3.1.13",
     "mongoose": "^5.0.17",
     "sinon": "^5.0.3"
   }
